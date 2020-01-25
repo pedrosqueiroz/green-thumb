@@ -1,0 +1,22 @@
+@import "../../assets/scss/colors.scss";
+.sunlight {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 720px;
+  &__sun {
+    width: 126px;
+    margin: 40px auto 10px;
+  }
+  &__text {
+    font-size: 2em;
+    font-weight: 300;
+    text-align: center;
+    color: $gray;
+    max-width: 470px;
+    margin: 20px auto 40px;
+    > .bold {
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../assets/scss/colors.scss";
+.option {
+  width: 215px;
+  height: 190px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 300ms, box-shadow 300ms;
+
+  &.--active,
+  &:hover {
+    .option__title {
+      font-weight: 500;
+      color: white;
+    }
+    .option__image {
+      filter: brightness(100);
+    }
+    &.--coral {
+      box-shadow: 0px 10px 30px rgba($coral, 0.35);
+      background-color: $coral;
+    }
+    &.--light-green {
+      box-shadow: 0px 10px 30px rgba($light-green, 0.35);
+      background-color: $light-green;
+    }
+  }
+
+  &__image {
+    max-width: 100px;
+    margin: 15px 0;
+  }
+  &__title {
+    color: $gray;
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .option {
+    width: 80%;
+    height: 75px;
+    max-width: 400px;
+    padding: 5px;
+    margin: 10px auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    &__image {
+      max-width: 42px;
+      margin: 10px 20px;
+    }
+  }
+}

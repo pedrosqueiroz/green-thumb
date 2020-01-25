@@ -1,0 +1,20 @@
+@import "./colors.scss";
+@import "./section.scss";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: #f6f6f6;
+  img {
+    user-select: none;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3em;
+}
+*:focus {
+  outline: none;
+}

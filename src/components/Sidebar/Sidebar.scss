@@ -1,0 +1,37 @@
+@import "../../assets/scss/colors";
+.sidebar {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  &__logo {
+    max-width: 190px;
+    margin: 0 auto;
+  }
+  &__line {
+    display: none;
+  }
+}
+@media (min-width: 960px) {
+  .sidebar {
+    position: absolute;
+    left: 80px;
+    height: 100vh;
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &__logo {
+      width: calc(40vh - 40px);
+      max-width: 190px;
+      transform: rotate(-90deg) translateX(-100%);
+      transform-origin: 0 0;
+    }
+    &__line {
+      display: block;
+      border-right: 1px solid lighten($dark-green, 40%);
+      height: 60%;
+      max-height: calc(60vh - 190px);
+      padding: 30px 0;
+    }
+  }
+}
